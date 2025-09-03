@@ -1,47 +1,278 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Introducción a Git 🔧</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Introducción a Git - Portal de Programación</title>
+  <meta name="description" content="Aprende los fundamentos del control de versiones con Git">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #475569;
+      --card: #ecfeff;
+      --card-foreground: #164e63;
+      --primary: #164e63;
+      --primary-foreground: #ffffff;
+      --secondary: #ea580c;
+      --muted: #fefce8;
+      --muted-foreground: #4b5563;
+      --border: #d1d5db;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+
+    .bg-primary { background-color: var(--primary); }
+    .text-primary { color: var(--primary); }
+    .bg-card { background-color: var(--card); }
+    .text-card-foreground { color: var(--card-foreground); }
+    .bg-muted { background-color: var(--muted); }
+    .text-muted-foreground { color: var(--muted-foreground); }
+    .border-border { border-color: var(--border); }
+
+    .prose pre {
+      background-color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .prose code {
+      background-color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
 </head>
-<body>
-<header class="hero">
-  <h1>🔧 Introducción a Git</h1>
-  <p>Control de versiones para proyectos de programación</p>
+<body class="min-h-screen">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">📚</span>
+        </div>
+        <h1 class="text-xl font-bold text-primary">Portal de Programación</h1>
+      </div>
+      <a href="index.html" class="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Header -->
+<header class="py-16 bg-card">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <div class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+        <span class="mr-2">🔧</span>
+        Control de Versiones
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
+        Introducción a Git
+      </h1>
+      <p class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        Control de versiones para proyectos de programación
+      </p>
+      <div class="flex items-center justify-center space-x-6 mt-8 text-sm text-muted-foreground">
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        5 minutos de lectura
+                    </span>
+        <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
+                        Nivel Básico
+                    </span>
+      </div>
+    </div>
+  </div>
 </header>
 
-<main class="container">
-  <section>
-    <h2>📌 ¿Qué es Git?</h2>
-    <p>
-      Git es un <strong>sistema de control de versiones</strong> que permite llevar un historial de los cambios en el código
-      y colaborar en equipo de forma ordenada.
-    </p>
-  </section>
+<!-- Article Content -->
+<main class="py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <article class="prose prose-lg max-w-none">
+      <!-- Introduction Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-4 flex items-center">
+            <span class="mr-3">📌</span>
+            ¿Qué es Git?
+          </h2>
+          <p class="text-foreground leading-relaxed text-lg">
+            Git es un <strong class="text-primary">sistema de control de versiones</strong> que permite llevar un historial de los cambios en el código
+            y colaborar en equipo de forma ordenada.
+          </p>
+          <div class="mt-6 p-4 bg-card rounded-lg border-l-4 border-primary">
+            <p class="text-card-foreground font-medium mb-2">💡 ¿Por qué es importante?</p>
+            <p class="text-muted-foreground">
+              Git te permite volver a versiones anteriores, trabajar en paralelo con otros desarrolladores y mantener un historial completo de tu proyecto.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <section>
-    <h2>🛠️ Comandos básicos</h2>
-    <pre><code>
-git init          # Inicia un repositorio
-git status        # Ver estado actual
-git add .         # Agrega cambios al área de preparación
-git commit -m ""  # Confirma los cambios
-git push          # Sube los cambios al remoto
-      </code></pre>
-  </section>
+      <!-- Commands Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-6 flex items-center">
+            <span class="mr-3">🛠️</span>
+            Comandos básicos
+          </h2>
 
-  <section>
-    <h2>✅ Conclusión</h2>
-    <p>
-      Git es la base del trabajo colaborativo en desarrollo de software. Con él podemos integrar CI/CD y trabajar en equipo sin caos.
-    </p>
-  </section>
+          <div class="space-y-6">
+            <div class="bg-muted p-6 rounded-lg">
+              <h3 class="text-lg font-medium text-card-foreground mb-3">Inicializar un repositorio</h3>
+              <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code>git init</code></pre>
+              <p class="text-muted-foreground mt-2">Inicia un nuevo repositorio Git en tu directorio actual.</p>
+            </div>
+
+            <div class="bg-muted p-6 rounded-lg">
+              <h3 class="text-lg font-medium text-card-foreground mb-3">Ver el estado</h3>
+              <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code>git status</code></pre>
+              <p class="text-muted-foreground mt-2">Muestra qué archivos han cambiado y cuáles están listos para commit.</p>
+            </div>
+
+            <div class="bg-muted p-6 rounded-lg">
+              <h3 class="text-lg font-medium text-card-foreground mb-3">Agregar cambios</h3>
+              <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code>git add .
+git add archivo.txt</code></pre>
+              <p class="text-muted-foreground mt-2">Agrega cambios al área de preparación (staging area).</p>
+            </div>
+
+            <div class="bg-muted p-6 rounded-lg">
+              <h3 class="text-lg font-medium text-card-foreground mb-3">Confirmar cambios</h3>
+              <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code>git commit -m "Descripción de los cambios"</code></pre>
+              <p class="text-muted-foreground mt-2">Guarda los cambios en el historial con un mensaje descriptivo.</p>
+            </div>
+
+            <div class="bg-muted p-6 rounded-lg">
+              <h3 class="text-lg font-medium text-card-foreground mb-3">Subir cambios</h3>
+              <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code>git push</code></pre>
+              <p class="text-muted-foreground mt-2">Sube los cambios al repositorio remoto (GitHub, GitLab, etc.).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workflow Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-6 flex items-center">
+            <span class="mr-3">🔄</span>
+            Flujo de trabajo típico
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">1</div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">Modificar archivos</h4>
+                  <p class="text-sm text-muted-foreground">Edita tu código</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">2</div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">git add .</h4>
+                  <p class="text-sm text-muted-foreground">Prepara los cambios</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">3</div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">git commit -m "..."</h4>
+                  <p class="text-sm text-muted-foreground">Guarda los cambios</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">4</div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">git push</h4>
+                  <p class="text-sm text-muted-foreground">Sube al servidor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-4 flex items-center">
+            <span class="mr-3">✅</span>
+            Conclusión
+          </h2>
+          <p class="text-foreground leading-relaxed text-lg mb-4">
+            Git es la base del trabajo colaborativo en desarrollo de software. Con él podemos integrar CI/CD y trabajar en equipo sin caos.
+          </p>
+          <div class="bg-card p-6 rounded-lg">
+            <h3 class="font-semibold text-card-foreground mb-3">🎯 Próximos pasos:</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Practica con un repositorio de prueba
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Aprende sobre ramas (branches)
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Explora GitHub y colaboración
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
 </main>
 
-<footer>
-  <p><a href="index.html">⬅️ Volver al índice</a></p>
+<!-- Navigation Footer -->
+<footer class="py-8 border-t border-border bg-card">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+      <a href="index.html" class="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Volver al índice
+      </a>
+      <a href="cicd.html" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity">
+        Siguiente: CI/CD
+        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

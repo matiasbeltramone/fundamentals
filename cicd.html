@@ -1,56 +1,357 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CI/CD con GitHub Actions 🚀</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CI/CD con GitHub Actions - Portal de Programación</title>
+  <meta name="description" content="Aprende integración y despliegue continuo con GitHub Actions">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #475569;
+      --card: #ecfeff;
+      --card-foreground: #164e63;
+      --primary: #164e63;
+      --primary-foreground: #ffffff;
+      --secondary: #ea580c;
+      --muted: #fefce8;
+      --muted-foreground: #4b5563;
+      --border: #d1d5db;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+
+    .bg-primary { background-color: var(--primary); }
+    .text-primary { color: var(--primary); }
+    .bg-card { background-color: var(--card); }
+    .text-card-foreground { color: var(--card-foreground); }
+    .bg-secondary { background-color: var(--secondary); }
+    .bg-muted { background-color: var(--muted); }
+    .text-muted-foreground { color: var(--muted-foreground); }
+    .border-border { border-color: var(--border); }
+  </style>
 </head>
-<body>
-<header class="hero">
-  <h1>🚀 CI/CD con GitHub Actions</h1>
-  <p>Integración y despliegue continuo explicado para principiantes</p>
+<body class="min-h-screen">
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">📚</span>
+        </div>
+        <h1 class="text-xl font-bold text-primary">Portal de Programación</h1>
+      </div>
+      <a href="index.html" class="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Header -->
+<header class="py-16 bg-card">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <div class="inline-flex items-center px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full mb-4">
+        <span class="mr-2">🚀</span>
+        Automatización
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
+        CI/CD con GitHub Actions
+      </h1>
+      <p class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        Integración y despliegue continuo explicado para principiantes
+      </p>
+      <div class="flex items-center justify-center space-x-6 mt-8 text-sm text-muted-foreground">
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        8 minutos de lectura
+                    </span>
+        <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
+                        Nivel Intermedio
+                    </span>
+      </div>
+    </div>
+  </div>
 </header>
 
-<main class="container">
-  <section>
-    <h2>📌 Introducción</h2>
-    <p>
-      CI/CD significa <strong>Integración Continua</strong> y <strong>Entrega Continua</strong>.
-      Nos ayuda a automatizar pruebas y despliegues para tener software siempre listo.
-    </p>
-  </section>
+<!-- Article Content -->
+<main class="py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <article class="prose prose-lg max-w-none">
+      <!-- Introduction Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-4 flex items-center">
+            <span class="mr-3">📌</span>
+            Introducción
+          </h2>
+          <p class="text-foreground leading-relaxed text-lg mb-4">
+            CI/CD significa <strong class="text-primary">Integración Continua</strong> y <strong class="text-primary">Entrega Continua</strong>.
+            Nos ayuda a automatizar pruebas y despliegues para tener software siempre listo.
+          </p>
 
-  <section>
-    <h2>⚙️ Workflow básico</h2>
-    <pre><code>
-name: Deploy a GitHub Pages
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div class="p-4 bg-card rounded-lg border-l-4 border-primary">
+              <h3 class="font-semibold text-card-foreground mb-2">🔄 Integración Continua (CI)</h3>
+              <p class="text-muted-foreground text-sm">
+                Automatiza la construcción y prueba del código cada vez que se hace un cambio.
+              </p>
+            </div>
+            <div class="p-4 bg-card rounded-lg border-l-4 border-secondary">
+              <h3 class="font-semibold text-card-foreground mb-2">🚀 Entrega Continua (CD)</h3>
+              <p class="text-muted-foreground text-sm">
+                Automatiza el despliegue del código a producción de forma segura y confiable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workflow Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-6 flex items-center">
+            <span class="mr-3">⚙️</span>
+            Workflow básico para GitHub Pages
+          </h2>
+
+          <p class="text-muted-foreground mb-6">
+            Este es un ejemplo de workflow que despliega automáticamente tu sitio a GitHub Pages cada vez que haces push a la rama main:
+          </p>
+
+          <div class="bg-gray-900 rounded-lg p-6 overflow-x-auto">
+                            <pre class="text-green-400 text-sm"><code>name: Deploy a GitHub Pages
 on:
   push:
     branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/configure-pages@v3
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: .
-      - uses: actions/deploy-pages@v1
-      </code></pre>
-  </section>
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  <section>
-    <h2>✅ Conclusión</h2>
-    <p>
-      Con GitHub Actions + Pages, cada vez que subís código a <code>main</code>, tu sitio se despliega automáticamente.
-    </p>
-  </section>
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3</code></pre>
+          </div>
+
+          <div class="mt-6 p-4 bg-muted rounded-lg">
+            <h3 class="font-semibold text-card-foreground mb-3">📝 Explicación del workflow:</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li class="flex items-start">
+                <span class="text-primary mr-2">•</span>
+                <span><strong>on: push:</strong> Se ejecuta cuando hay cambios en la rama main</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">•</span>
+                <span><strong>permissions:</strong> Define los permisos necesarios para el despliegue</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">•</span>
+                <span><strong>jobs:</strong> Define las tareas a ejecutar (checkout, setup, upload, deploy)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Setup Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-6 flex items-center">
+            <span class="mr-3">🛠️</span>
+            Cómo configurarlo
+          </h2>
+
+          <div class="space-y-6">
+            <div class="flex items-start p-4 bg-card rounded-lg">
+              <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold flex-shrink-0">1</div>
+              <div>
+                <h3 class="font-semibold text-card-foreground mb-2">Crear el archivo de workflow</h3>
+                <p class="text-muted-foreground mb-2">
+                  Crea la carpeta <code class="bg-muted px-2 py-1 rounded text-sm">.github/workflows/</code> en tu repositorio
+                </p>
+                <p class="text-muted-foreground">
+                  Dentro, crea un archivo <code class="bg-muted px-2 py-1 rounded text-sm">deploy.yml</code> con el código de arriba
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start p-4 bg-card rounded-lg">
+              <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold flex-shrink-0">2</div>
+              <div>
+                <h3 class="font-semibold text-card-foreground mb-2">Configurar GitHub Pages</h3>
+                <p class="text-muted-foreground mb-2">
+                  Ve a Settings → Pages en tu repositorio de GitHub
+                </p>
+                <p class="text-muted-foreground">
+                  Selecciona "GitHub Actions" como fuente de despliegue
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start p-4 bg-card rounded-lg">
+              <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold flex-shrink-0">3</div>
+              <div>
+                <h3 class="font-semibold text-card-foreground mb-2">¡Listo para usar!</h3>
+                <p class="text-muted-foreground">
+                  Cada vez que hagas push a main, tu sitio se desplegará automáticamente
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-6 flex items-center">
+            <span class="mr-3">🎯</span>
+            Beneficios del CI/CD
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <span class="text-xl">⚡</span>
+                </div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">Despliegues rápidos</h4>
+                  <p class="text-sm text-muted-foreground">Automatización completa del proceso</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <span class="text-xl">🛡️</span>
+                </div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">Menos errores</h4>
+                  <p class="text-sm text-muted-foreground">Proceso consistente y confiable</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                  <span class="text-xl">🔄</span>
+                </div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">Feedback inmediato</h4>
+                  <p class="text-sm text-muted-foreground">Sabes al instante si algo falló</p>
+                </div>
+              </div>
+
+              <div class="flex items-center p-4 bg-card rounded-lg">
+                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                  <span class="text-xl">👥</span>
+                </div>
+                <div>
+                  <h4 class="font-medium text-card-foreground">Mejor colaboración</h4>
+                  <p class="text-sm text-muted-foreground">Todo el equipo usa el mismo proceso</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion Section -->
+      <section class="mb-12">
+        <div class="bg-white border border-border rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-card-foreground mb-4 flex items-center">
+            <span class="mr-3">✅</span>
+            Conclusión
+          </h2>
+          <p class="text-foreground leading-relaxed text-lg mb-4">
+            Con GitHub Actions + Pages, cada vez que subís código a <code class="bg-muted px-2 py-1 rounded text-sm font-mono">main</code>, tu sitio se despliega automáticamente.
+          </p>
+          <div class="bg-card p-6 rounded-lg">
+            <h3 class="font-semibold text-card-foreground mb-3">🚀 Próximos pasos:</h3>
+            <ul class="space-y-2 text-muted-foreground">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Implementa el workflow en tu proyecto
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Explora otros tipos de actions (testing, linting)
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Aprende sobre environments y secrets
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
 </main>
 
-<footer>
-  <p><a href="index.html">⬅️ Volver al índice</a></p>
+<!-- Navigation Footer -->
+<footer class="py-8 border-t border-border bg-card">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+      <a href="git.html" class="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Anterior: Git
+      </a>
+      <a href="index.html" class="inline-flex items-center text-muted-foreground hover:text-primary transition-colors">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Volver al índice
+      </a>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
