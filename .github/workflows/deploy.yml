@@ -1,16 +1,50 @@
-name: Deploy a GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
+
+# Permisos mínimos requeridos para Pages + v4
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+# Evita despliegues concurrentes
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/configure-pages@v3
-      - uses: actions/upload-pages-artifact@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # (Opcional) Si tenés un paso de build (npm run build, etc.), hacelo aquí
+      # - run: |
+      #     npm ci
+      #     npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
+          # Cambiá por tu carpeta de salida si tenés build (por ej. dist/)
           path: .
-      - uses: actions/deploy-pages@v1
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
