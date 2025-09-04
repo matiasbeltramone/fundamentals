@@ -1,209 +1,121 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Programación - Material Educativo</title>
     <meta name="description" content="Material de estudio y tutoriales de programación para estudiantes y desarrolladores">
-    <!-- Replaced Tailwind CDN with compiled CSS -->
-    <link rel="stylesheet" href="./dist/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --background: #ffffff;
-            --foreground: #475569;
-            --card: #ecfeff;
-            --card-foreground: #164e63;
-            --primary: #164e63;
-            --primary-foreground: #ffffff;
-            --secondary: #ea580c;
-            --secondary-foreground: #ffffff;
-            --muted: #fefce8;
-            --muted-foreground: #4b5563;
-            --accent: #ea580c;
-            --border: #d1d5db;
-            --radius: 0.5rem;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--background);
-            color: var(--foreground);
-        }
-
-        .bg-primary { background-color: var(--primary); }
-        .text-primary { color: var(--primary); }
-        .bg-card { background-color: var(--card); }
-        .text-card-foreground { color: var(--card-foreground); }
-        .bg-secondary { background-color: var(--secondary); }
-        .text-secondary { color: var(--secondary); }
-        .border-border { border-color: var(--border); }
-
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen">
+<body>
 <!-- Navigation -->
-<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">📚</span>
-                </div>
-                <h1 class="text-xl font-bold text-primary">Portal de Programación</h1>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <div class="nav-logo">📚</div>
+                <h1>Portal de Programación</h1>
             </div>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#inicio" class="text-foreground hover:text-primary transition-colors">Inicio</a>
-                <a href="#tutoriales" class="text-foreground hover:text-primary transition-colors">Tutoriales</a>
-                <a href="#recursos" class="text-foreground hover:text-primary transition-colors">Recursos</a>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#tutoriales">Tutoriales</a>
+                <a href="#recursos">Recursos</a>
             </div>
         </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section id="inicio" class="py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-            <span class="gradient-text">Portal de Programación</span>
-        </h1>
-        <p class="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+<section id="inicio" class="hero">
+    <div class="container">
+        <h1 class="hero-title">Portal de Programación</h1>
+        <p class="hero-subtitle">
             Material de la cátedra - Ejemplos y guías prácticas para aprender desarrollo web y programación
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#tutoriales" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity">
+        <div class="hero-buttons">
+            <a href="#tutoriales" class="btn btn-primary">
                 Explorar Tutoriales
-                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+                <span class="btn-arrow">→</span>
             </a>
-            <a href="#recursos" class="inline-flex items-center px-6 py-3 border border-border rounded-lg hover:bg-card transition-colors">
-                Ver Recursos
-            </a>
+            <a href="#recursos" class="btn btn-secondary">Ver Recursos</a>
         </div>
     </div>
 </section>
 
 <!-- Stats Section -->
-<section class="py-16 bg-card">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-                <div class="text-3xl font-bold text-primary mb-2">2+</div>
-                <div class="text-muted-foreground">Tutoriales Disponibles</div>
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Tutoriales Disponibles</div>
             </div>
-            <div>
-                <div class="text-3xl font-bold text-primary mb-2">100%</div>
-                <div class="text-muted-foreground">Contenido Gratuito</div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Contenido Gratuito</div>
             </div>
-            <div>
-                <div class="text-3xl font-bold text-primary mb-2">∞</div>
-                <div class="text-muted-foreground">Aprendizaje Continuo</div>
+            <div class="stat-item">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Aprendizaje Continuo</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Tutorials Section -->
-<section id="tutoriales" class="py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Tutoriales Disponibles</h2>
-            <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Explora nuestros tutoriales paso a paso diseñados para llevarte desde los conceptos básicos hasta técnicas avanzadas
-            </p>
+<section id="tutoriales" class="tutorials">
+    <div class="container">
+        <div class="section-header">
+            <h2>Tutoriales Disponibles</h2>
+            <p>Explora nuestros tutoriales paso a paso diseñados para llevarte desde los conceptos básicos hasta técnicas avanzadas</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="tutorials-grid">
             <!-- Git Tutorial Card -->
-            <article class="bg-white border border-border rounded-xl p-8 card-hover">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                        <span class="text-2xl">🔧</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-card-foreground">Introducción a Git</h3>
-                        <p class="text-sm text-muted-foreground">Control de versiones</p>
+            <article class="tutorial-card">
+                <div class="card-header">
+                    <div class="card-icon git">🔧</div>
+                    <div class="card-info">
+                        <h3>Introducción a Git</h3>
+                        <p class="card-category">Control de versiones</p>
                     </div>
                 </div>
-                <p class="text-foreground mb-6 leading-relaxed">
+                <p class="card-description">
                     Aprende los fundamentos del control de versiones con Git. Desde comandos básicos hasta flujos de trabajo colaborativos.
                 </p>
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-4 text-sm text-muted-foreground">
-                            <span class="flex items-center">
-                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                5 min lectura
-                            </span>
-                        <span class="flex items-center">
-                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                                </svg>
-                                Básico
-                            </span>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <span class="meta-item">⏱️ 5 min lectura</span>
+                        <span class="meta-item level-basic">🏷️ Básico</span>
                     </div>
-                    <a href="git.html" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity">
-                        Leer Tutorial
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
+                    <a href="git.html" class="btn btn-small btn-primary">
+                        Leer Tutorial →
                     </a>
                 </div>
             </article>
 
             <!-- CI/CD Tutorial Card -->
-            <article class="bg-white border border-border rounded-xl p-8 card-hover">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
-                        <span class="text-2xl">🚀</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-card-foreground">CI/CD con GitHub Actions</h3>
-                        <p class="text-sm text-muted-foreground">Automatización</p>
+            <article class="tutorial-card">
+                <div class="card-header">
+                    <div class="card-icon cicd">🚀</div>
+                    <div class="card-info">
+                        <h3>CI/CD con GitHub Actions</h3>
+                        <p class="card-category">Automatización</p>
                     </div>
                 </div>
-                <p class="text-foreground mb-6 leading-relaxed">
+                <p class="card-description">
                     Domina la integración y despliegue continuo. Automatiza tus workflows y despliega con confianza usando GitHub Actions.
                 </p>
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-4 text-sm text-muted-foreground">
-                            <span class="flex items-center">
-                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                8 min lectura
-                            </span>
-                        <span class="flex items-center">
-                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                                </svg>
-                                Intermedio
-                            </span>
+                <div class="card-footer">
+                    <div class="card-meta">
+                        <span class="meta-item">⏱️ 8 min lectura</span>
+                        <span class="meta-item level-intermediate">🏷️ Intermedio</span>
                     </div>
-                    <a href="cicd.html" class="inline-flex items-center px-4 py-2 bg-secondary text-white rounded-lg hover:opacity-90 transition-opacity">
-                        Leer Tutorial
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
+                    <a href="cicd.html" class="btn btn-small btn-orange">
+                        Leer Tutorial →
                     </a>
                 </div>
             </article>
@@ -212,59 +124,43 @@
 </section>
 
 <!-- Resources Section -->
-<section id="recursos" class="py-20 bg-card">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Recursos Adicionales</h2>
-            <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Herramientas y enlaces útiles para complementar tu aprendizaje
-            </p>
+<section id="recursos" class="resources">
+    <div class="container">
+        <div class="section-header">
+            <h2>Recursos Adicionales</h2>
+            <p>Herramientas y enlaces útiles para complementar tu aprendizaje</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white border border-border rounded-xl p-6 text-center">
-                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">📖</span>
-                </div>
-                <h3 class="text-lg font-semibold text-card-foreground mb-2">Documentación</h3>
-                <p class="text-muted-foreground text-sm">Enlaces a documentación oficial y recursos de referencia</p>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-icon">📖</div>
+                <h3>Documentación</h3>
+                <p>Enlaces a documentación oficial y recursos de referencia</p>
             </div>
-
-            <div class="bg-white border border-border rounded-xl p-6 text-center">
-                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">🛠️</span>
-                </div>
-                <h3 class="text-lg font-semibold text-card-foreground mb-2">Herramientas</h3>
-                <p class="text-muted-foreground text-sm">Editores, extensiones y herramientas de desarrollo recomendadas</p>
+            <div class="resource-card">
+                <div class="resource-icon">🛠️</div>
+                <h3>Herramientas</h3>
+                <p>Editores, extensiones y herramientas de desarrollo recomendadas</p>
             </div>
-
-            <div class="bg-white border border-border rounded-xl p-6 text-center">
-                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">💡</span>
-                </div>
-                <h3 class="text-lg font-semibold text-card-foreground mb-2">Ejercicios</h3>
-                <p class="text-muted-foreground text-sm">Práctica adicional y proyectos para reforzar conceptos</p>
+            <div class="resource-card">
+                <div class="resource-icon">💡</div>
+                <h3>Ejercicios</h3>
+                <p>Práctica adicional y proyectos para reforzar conceptos</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-12 border-t border-border">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-            <div class="flex items-center justify-center space-x-2 mb-4">
-                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">📚</span>
-                </div>
-                <span class="text-lg font-semibold text-primary">Portal de Programación</span>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">📚</div>
+                <span>Portal de Programación</span>
             </div>
-            <p class="text-muted-foreground mb-4">
-                Hecho con ❤️ para estudiantes y desarrolladores
-            </p>
-            <p class="text-sm text-muted-foreground">
-                Desplegado con GitHub Pages • Actualizado regularmente
-            </p>
+            <p class="footer-text">Hecho con ❤️ para estudiantes y desarrolladores</p>
+            <p class="footer-small">Desplegado con GitHub Pages • Actualizado regularmente</p>
         </div>
     </div>
 </footer>
