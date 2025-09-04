@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Programación - Portal de Programación</title>
+    <meta name="description" content="Aprende qué es programar realmente, conceptos básicos y paradigmas de programación">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <div class="nav-logo">📚</div>
+                <h1><a href="index.html">Portal de Programación</a></h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">← Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Article Header -->
+<header class="article-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span class="breadcrumb-separator">→</span>
+            <span>Fundamentos de Programación</span>
+        </div>
+
+        <div class="article-meta">
+            <div class="article-category fundamentals">💻 Conceptos básicos</div>
+            <h1 class="article-title">Fundamentos de Programación</h1>
+            <p class="article-subtitle">Descubre qué es programar realmente y los conceptos esenciales del desarrollo de software</p>
+
+            <div class="article-info">
+                <span class="info-item">⏱️ 12 min de lectura</span>
+                <span class="info-item">🏷️ Nivel básico</span>
+                <span class="info-item">📅 Actualizado recientemente</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Article Content -->
+<main class="article-content">
+    <div class="container">
+        <article class="content">
+            <section class="content-section">
+                <h2>💻 ¿Qué es programar? Y, ¿qué es un programa? 🤔</h2>
+                <p>Comencemos! Si estás aquí, es probable que ya hayas escuchado las palabras "programar" o "programa" mil veces, pero quizás no tengas del todo claro a qué nos referimos. ¡No te preocupes! En este post, vamos a desglosar estos conceptos de la forma más simple posible.</p>
+            </section>
+
+            <section class="content-section">
+                <h3>1. Descomponiendo el concepto: Programación Web 🌐</h3>
+                <p>Cuando decimos <strong>programación web</strong>, estamos uniendo dos ideas principales:</p>
+                <ol>
+                    <li><strong>Programación:</strong> El acto de crear un <strong>programa</strong>.</li>
+                    <li><strong>Web:</strong> El universo de internet, sitios y servicios a los que accedemos.</li>
+                </ol>
+                <p>Para entender la <em>programación web</em>, primero necesitamos entender qué es programar y qué es un programa. ¡Vamos a empezar por ahí!</p>
+            </section>
+
+            <section class="content-section">
+                <h3>2. El misterio del Programa: ¿Qué es? 🧐</h3>
+                <p>Probablemente la definición más común que encuentres sea: "<em>Un programa es una secuencia de instrucciones para una computadora</em>".</p>
+
+                <p>Aunque no es del todo incorrecta, esta definición es un poco limitada. Piensa en esto:</p>
+
+                <div class="highlight-box warning">
+                    <ul>
+                        <li>❌ <strong>Es como si dijéramos que la astronomía es la "ciencia de mirar por un telescopio".</strong> El <strong>telescopio</strong> es solo una <strong>herramienta</strong>, <strong>no</strong> el <strong>objeto de estudio</strong>.</li>
+                        <li>❌ <strong>No todos los programas son una lista de pasos.</strong> Por ejemplo, hay lenguajes (como Prolog) donde le das a la computadora hechos y reglas, y ella saca sus propias conclusiones, sin una secuencia de instrucciones fija que le diga que acciones realizar.</li>
+                    </ul>
+                </div>
+
+                <h4>🖥️ La máquina de Von Neumann: El porqué de la definición clásica 🧠</h4>
+                <p>La definición de programa como una "secuencia de instrucciones" tiene sus raíces en la forma en que se construyen y operan la mayoría de las computadoras que usamos hoy en día. Esto se conoce como la <strong>arquitectura de Von Neumann</strong>, un modelo que fue fundamental para el desarrollo de la computación.</p>
+
+                <p>En esta arquitectura, la computadora funciona con dos componentes principales:</p>
+                <ul>
+                    <li><strong>CPU (Unidad Central de Procesamiento):</strong> El "cerebro" que realiza los cálculos.</li>
+                    <li><strong>Memoria (RAM):</strong> Donde se almacenan tanto el programa como los datos que se van a usar.</li>
+                </ul>
+
+                <p>El programa, literalmente, es una serie de instrucciones almacenadas una tras otra en la memoria. La CPU las ejecuta en un ciclo continuo que se conoce como <strong>Fetch-Decode-Execute</strong> (Buscar-Decodificar-Ejecutar):</p>
+
+                <div class="code-block">
+                    <ol>
+                        <li><strong>Fetch (Buscar):</strong> La CPU va a la memoria y <strong>busca</strong> la siguiente instrucción.</li>
+                        <li><strong>Decode (Decodificar):</strong> La CPU <strong>decodifica</strong> (traduce) esa instrucción para entender qué debe hacer.</li>
+                        <li><strong>Execute (Ejecutar):</strong> La CPU <strong>ejecuta</strong> la acción indicada por la instrucción (por ejemplo, sumar dos números, mover un dato, etc.).</li>
+                    </ol>
+                </div>
+
+                <p>Este ciclo es una <strong>secuencia de pasos</strong>, uno detrás del otro. Por eso, históricamente, la definición de un programa se ató a este modelo. La limitación es que confunde el concepto de programa con una herramienta específica (la arquitectura Von Neumann), en lugar de centrarse en la esencia del programa en sí.</p>
+            </section>
+
+            <section class="content-section">
+                <h3>🧩 Un ejemplo para contrastar: La lógica de Prolog 🧠</h3>
+                <p>Para entender que no todos los programas son una secuencia de pasos, vamos a ver un ejemplo con el lenguaje <strong>Prolog</strong>, que sigue el paradigma de <strong>programación lógica</strong> ya que lo mencionamos anteriormente, lo vamos a detallar un poco.</p>
+
+                <p>Imagina que queremos que la computadora sepa si un elemento está en una lista. En un lenguaje tradicional (basado en Von Neumann), le diríamos: "Ve al primer elemento de la lista. Si es el que buscas, detente. Si no, ve al segundo. Repite esto hasta que lo encuentres o la lista se termine."</p>
+
+                <p>En Prolog, la forma de pensar es totalmente diferente. Le decimos a la computadora la <strong>lógica</strong> del problema a través de <strong>hechos</strong> y <strong>reglas</strong>, y luego le preguntamos.</p>
+
+                <div class="code-block">
+                    <h5>Hechos:</h5>
+                    <pre><code>contiene(X, [X | _]).</code></pre>
+                    <p>Este es un <strong>hecho</strong> que dice: El elemento <strong>X</strong> está en una lista si <strong>X</strong> es el <strong>primer elemento</strong> de la lista (el <code>| _</code> significa "el resto de la lista no me importa").</p>
+
+                    <h5>Reglas:</h5>
+                    <pre><code>contiene(Y, [_ | XS]) :- contiene(Y, XS).</code></pre>
+                    <p>Esta es una <strong>regla</strong> que dice: El elemento <strong>Y</strong> está en una lista si <strong>Y</strong> está en el <strong>resto de la lista</strong> (el <code>_</code> significa "el primer elemento no me importa").</p>
+                </div>
+
+                <h4>¿Cómo funciona? 🤔</h4>
+                <p>Cuando le preguntas a Prolog si un número está en una lista, por ejemplo, <code>contiene(2, [1, 2, 3]).</code>, el programa no sigue una secuencia de pasos. En su lugar, el <strong>motor de inferencia</strong> de Prolog razona así:</p>
+
+                <div class="highlight-box info">
+                    <ul>
+                        <li><strong>Paso 1:</strong> "Quiero saber si el 2 está en <code>[1, 2, 3]</code>."</li>
+                        <li><strong>Paso 2:</strong> "La regla <code>contiene(X, [X | _])</code> no aplica porque el 2 no es el primer elemento (el 1)."</li>
+                        <li><strong>Paso 3:</strong> "Entonces, voy a usar la otra regla: <code>contiene(Y, [_ | XS]) :- contiene(Y, XS).</code>"</li>
+                        <li><strong>Paso 4:</strong> "Esta regla me dice que, para saber si el 2 está en <code>[1, 2, 3]</code>, solo necesito saber si el 2 está en el <strong>resto de la lista</strong>, es decir, en <code>[2, 3]</code>."</li>
+                        <li><strong>Paso 5:</strong> "Ahora, la pregunta es: ¿está el 2 en <code>[2, 3]</code>?"</li>
+                        <li><strong>Paso 6:</strong> "¡Sí! La primera regla <code>contiene(X, [X | _])</code> aplica ahora, porque el 2 es el primer elemento de la lista <code>[2, 3]</code>."</li>
+                        <li><strong>Conclusión:</strong> "¡<code>True</code> (verdadero)!"</li>
+                    </ul>
+                </div>
+
+                <p>Como ves, en este ejemplo, no le dimos una serie de pasos fijos a la computadora. Simplemente le dimos la lógica, y ella usó esa lógica para encontrar la respuesta.</p>
+            </section>
+
+            <section class="content-section">
+                <h3>Entonces, ¿cuál es una mejor definición? 🤔</h3>
+                <h4>El Programa como representación de conocimiento 💡</h4>
+                <p>Nosotros, vamos a pensar en un programa como <strong>la representación de conocimiento sobre un dominio de interés, que es ejecutable por una computadora.</strong></p>
+
+                <p>Analicemos esto por partes:</p>
+                <ul>
+                    <li><strong>Representación de conocimiento:</strong> El programa es un <strong>modelo</strong>. Es nuestra forma de "traducir" la realidad (un negocio, un problema, un juego) a un lenguaje que la computadora pueda entender.</li>
+                    <li><strong>Dominio de interés:</strong> Es el tema o área sobre la que estamos trabajando.
+                        <ul>
+                            <li><strong>Ejemplo de Dominio de negocio:</strong> Si creas un sistema para un supermercado, tu dominio es cómo funciona ese supermercado: los productos, las ventas, los clientes, etc.</li>
+                            <li><strong>Ejemplo de Dominio de problema:</strong> Si haces una app para resolver Sudokus, el dominio es la lógica de ese juego.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ejecutable:</strong> Significa que una computadora puede "leer" y "correr" este modelo para obtener un resultado.</li>
+                </ul>
+
+                <div class="highlight-box success">
+                    <p>Esta definición es mucho más amplia y útil, porque nos muestra que un programa no es solo código técnico, ¡también es una expresión de ideas!</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>¿Qué son los paradigmas de programación? 💡</h3>
+                <p>A las "formas de hacer un programa" que no son una secuencia de instrucciones se les llama <strong>paradigmas de programación</strong>. Un paradigma es, en esencia, un <strong>estilo o filosofía</strong> de cómo se organiza y estructura un programa. No es una herramienta, sino una forma de pensar y resolver problemas.</p>
+
+                <p>Así como en la pintura existen diferentes estilos (realismo, impresionismo, etc.), en programación existen varios paradigmas. Cada uno tiene sus propias ideas sobre qué es un programa y cómo se debe construir. Los dos grandes grupos que podemos diferenciar son:</p>
+
+                <div class="paradigms-grid">
+                    <div class="paradigm-card">
+                        <h4>Paradigmas imperativos</h4>
+                        <p>Aquí le dices a la computadora <strong>"cómo hacer algo"</strong>, paso a paso.</p>
+                        <ul>
+                            <li><strong>Programación procedural:</strong> Escribes un programa como una secuencia de procedimientos o subrutinas. Es el enfoque más tradicional.</li>
+                            <li><strong>Programación orientada a objetos (POO):</strong> Organizas el código en "objetos" que contienen tanto datos como las acciones que pueden realizarse con esos datos. Es muy popular hoy en día.</li>
+                        </ul>
+                    </div>
+
+                    <div class="paradigm-card">
+                        <h4>Paradigmas declarativos</h4>
+                        <p>Aquí le dices a la computadora <strong>"qué hacer"</strong>, sin especificar el cómo. La computadora se encarga de resolverlo.</p>
+                        <ul>
+                            <li><strong>Programación lógica:</strong> Como en el ejemplo de Prolog, defines hechos y reglas para que el programa deduzca una solución.</li>
+                            <li><strong>Programación funcional:</strong> Se basa en funciones matemáticas, donde cada función toma una entrada y produce una salida, sin modificar nada fuera de ella. Es muy popular para resolver problemas complejos y concurrentes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>3. El proceso de Programar: Más que escribir código ✍️</h3>
+                <p>Si un programa es el <strong>producto</strong>, entonces <strong>programar</strong> es el <strong>proceso</strong> de crearlo. Pero este proceso no es lineal, no es solo sentarse a escribir código de principio a fin.</p>
+
+                <div class="highlight-box info">
+                    <h4>Programar es un proceso de aprendizaje continuo. 🧠</h4>
+                </div>
+
+                <p>Como programadores, no llegamos sabiendo todo sobre el dominio de interés. Nuestro trabajo es:</p>
+                <ol>
+                    <li><strong>Escuchar y observar:</strong> Hablar con las personas que entienden el negocio (el dueño del supermercado, los empleados, los clientes).</li>
+                    <li><strong>Aprender:</strong> Entender las reglas, los procesos y las necesidades del dominio.</li>
+                    <li><strong>Representar:</strong> Convertir todo ese conocimiento en un programa que la computadora pueda ejecutar.</li>
+                </ol>
+
+                <p>Este proceso nunca termina. Los negocios y los problemas evolucionan, las leyes cambian, la tecnología avanza. Por eso, el programa también necesita evolucionar. Casi siempre, trabajarás en un programa que ya existe y que está siendo usado, y tu tarea será adaptarlo y mejorarlo.</p>
+
+                <div class="highlight-box tip">
+                    <p><strong>💡 Tip:</strong> Programar no solo requiere habilidades técnicas, también necesitas ser un buen observador y un gran comunicador. Eres un solucionador de problemas, y para resolverlos, primero debes entenderlos.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Resumen para llevar a casa 🚀</h3>
+                <div class="summary-box">
+                    <ul>
+                        <li><strong>Un programa</strong> no es solo una lista de instrucciones, es una <strong>representación ejecutable del conocimiento</strong> sobre un tema.</li>
+                        <li><strong>Programar</strong> es un <strong>proceso de aprendizaje constante</strong>, donde observamos el mundo, entendemos un problema y lo traducimos a un lenguaje que la computadora pueda usar.</li>
+                        <li><strong>La programación profesional</strong> es un oficio que combina habilidades técnicas con la capacidad de entender y <strong>colaborar en un mundo dinámico y complejo.</strong></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </div>
+</main>
+
+<!-- Navigation Footer -->
+<section class="article-navigation">
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link prev">
+                <span class="nav-direction">← Anterior</span>
+                <span class="nav-title">Volver al inicio</span>
+            </a>
+            <a href="git.html" class="nav-link next">
+                <span class="nav-direction">Siguiente →</span>
+                <span class="nav-title">Introducción a Git</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">📚</div>
+                <span>Portal de Programación</span>
+            </div>
+            <p class="footer-text">Hecho con ❤️ para estudiantes y desarrolladores</p>
+            <p class="footer-small">Desplegado con GitHub Pages • Actualizado regularmente</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
