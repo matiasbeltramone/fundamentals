@@ -1,0 +1,22 @@
+{
+  "name": "educational-blog",
+  "version": "1.0.0",
+  "description": "Blog educativo de programación con material de estudio",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch=false --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
+    "clean": "rm -rf dist && mkdir -p dist"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "@tailwindcss/typography": "^0.5.10"
+  },
+  "keywords": [
+    "blog",
+    "educacion",
+    "programacion",
+    "tutoriales"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
