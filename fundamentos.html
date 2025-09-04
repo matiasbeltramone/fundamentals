@@ -55,8 +55,8 @@
     <div class="container">
         <article class="content">
             <section class="content-section">
-                <h2>💻 ¿Qué es programar? Y, ¿qué es un programa? 🤔</h2>
-                <p>Comencemos! Si estás aquí, es probable que ya hayas escuchado las palabras "programar" o "programa" mil veces, pero quizás no tengas del todo claro a qué nos referimos. ¡No te preocupes! En este post, vamos a desglosar estos conceptos de la forma más simple posible.</p>
+                <h2>💻 ¿Qué es programar? Y, ¿qué es un programa?</h2>
+                <p>¡Comencemos! Si estás aquí, es probable que ya hayas escuchado las palabras "programar" o "programa" mil veces, pero quizás no tengas del todo claro a qué nos referimos. ¡No te preocupes! En este post, vamos a desglosar estos conceptos de la forma más simple posible.</p>
             </section>
 
             <section class="content-section">
@@ -128,7 +128,7 @@
                 <div class="highlight-box info">
                     <ul>
                         <li><strong>Paso 1:</strong> "Quiero saber si el 2 está en <code>[1, 2, 3]</code>."</li>
-                        <li><strong>Paso 2:</strong> "La regla <code>contiene(X, [X | _])</code> no aplica porque el 2 no es el primer elemento (el 1)."</li>
+                        <li><strong>Paso 2:</strong> "La regla <code>contiene(X, [X | _])</code> no aplica porque el 2 no es el primer elemento (lo es el 1 en este caso)."</li>
                         <li><strong>Paso 3:</strong> "Entonces, voy a usar la otra regla: <code>contiene(Y, [_ | XS]) :- contiene(Y, XS).</code>"</li>
                         <li><strong>Paso 4:</strong> "Esta regla me dice que, para saber si el 2 está en <code>[1, 2, 3]</code>, solo necesito saber si el 2 está en el <strong>resto de la lista</strong>, es decir, en <code>[2, 3]</code>."</li>
                         <li><strong>Paso 5:</strong> "Ahora, la pregunta es: ¿está el 2 en <code>[2, 3]</code>?"</li>
@@ -138,33 +138,12 @@
                 </div>
 
                 <p>Como ves, en este ejemplo, no le dimos una serie de pasos fijos a la computadora. Simplemente le dimos la lógica, y ella usó esa lógica para encontrar la respuesta.</p>
-            </section>
-
-            <section class="content-section">
-                <h3>Entonces, ¿cuál es una mejor definición? 🤔</h3>
-                <h4>El Programa como representación de conocimiento 💡</h4>
-                <p>Nosotros, vamos a pensar en un programa como <strong>la representación de conocimiento sobre un dominio de interés, que es ejecutable por una computadora.</strong></p>
-
-                <p>Analicemos esto por partes:</p>
-                <ul>
-                    <li><strong>Representación de conocimiento:</strong> El programa es un <strong>modelo</strong>. Es nuestra forma de "traducir" la realidad (un negocio, un problema, un juego) a un lenguaje que la computadora pueda entender.</li>
-                    <li><strong>Dominio de interés:</strong> Es el tema o área sobre la que estamos trabajando.
-                        <ul>
-                            <li><strong>Ejemplo de Dominio de negocio:</strong> Si creas un sistema para un supermercado, tu dominio es cómo funciona ese supermercado: los productos, las ventas, los clientes, etc.</li>
-                            <li><strong>Ejemplo de Dominio de problema:</strong> Si haces una app para resolver Sudokus, el dominio es la lógica de ese juego.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Ejecutable:</strong> Significa que una computadora puede "leer" y "correr" este modelo para obtener un resultado.</li>
-                </ul>
-
-                <div class="highlight-box success">
-                    <p>Esta definición es mucho más amplia y útil, porque nos muestra que un programa no es solo código técnico, ¡también es una expresión de ideas!</p>
-                </div>
+                <p>Además, podrás observar que esto simplemente es otro estilo de programar, te preguntarás que son los paradigmas de programación que de alguna manera venimos charlando en los ejemplos.</p>
             </section>
 
             <section class="content-section">
                 <h3>¿Qué son los paradigmas de programación? 💡</h3>
-                <p>A las "formas de hacer un programa" que no son una secuencia de instrucciones se les llama <strong>paradigmas de programación</strong>. Un paradigma es, en esencia, un <strong>estilo o filosofía</strong> de cómo se organiza y estructura un programa. No es una herramienta, sino una forma de pensar y resolver problemas.</p>
+                <p>Un paradigma de programación es una filosofía o un estilo para construir programas. Piensa en ello como una forma de pensar sobre cómo resolver un problema. Hay muchos paradigmas, cada uno con sus propias reglas y conceptos.</p>
 
                 <p>Así como en la pintura existen diferentes estilos (realismo, impresionismo, etc.), en programación existen varios paradigmas. Cada uno tiene sus propias ideas sobre qué es un programa y cómo se debe construir. Los dos grandes grupos que podemos diferenciar son:</p>
 
@@ -187,6 +166,66 @@
                         </ul>
                     </div>
                 </div>
+
+                <h4>Entonces, ¿por qué la confusión? 🤔</h4>
+
+                <p>La definición clásica de programa se centra en el paradigma imperativo y lo trata como si fuera la única forma de programar. Sin embargo, como vimos con el ejemplo de Prolog, hay otras formas de pensar un programa que no se basan en una secuencia de instrucciones. El término paradigma engloba todas estas diferentes "filosofías", tanto las que usan secuencias de pasos como las que no.</p>
+            </section>
+
+            <section class="content-section">
+                <h3>Entonces, ¿cuál es una mejor definición? 🤔</h3>
+
+                <div class="highlight-box info">
+                    <h4>El Programa como representación de conocimiento 💡</h4>
+                </div>
+
+                <p>Nosotros, vamos a pensar en un programa como <strong>la representación de conocimiento sobre un dominio de interés, que es ejecutable por una computadora.</strong></p>
+
+                <p>Analicemos esto por partes:</p>
+                <ul>
+                    <li><strong>Representación de conocimiento:</strong> El programa es un <strong>modelo</strong>. Es nuestra forma de "traducir" la realidad (un negocio, un problema, un juego) a un lenguaje que la computadora pueda entender.</li>
+                    <li><strong>Dominio de interés:</strong> Es el tema o área sobre la que estamos trabajando.
+                        <ul>
+                            <li><strong>Ejemplo de Dominio de negocio:</strong> Si creas un sistema para un supermercado, tu dominio es cómo funciona ese supermercado: los productos, las ventas, los clientes, etc.</li>
+                            <li><strong>Ejemplo de Dominio de problema:</strong> Si haces una app para resolver Sudokus, el dominio es la lógica de ese juego.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ejecutable:</strong> Significa que una computadora puede "leer" y "correr" este modelo para obtener un resultado.</li>
+                </ul>
+
+                <div class="highlight-box success">
+                    <p>Esta definición es mucho más amplia y útil, porque nos muestra que un programa no es solo código técnico, ¡también es una expresión de ideas!</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>🧐 Lenguaje vs. Paradigma: No son lo mismo 👩‍🏫</h3>
+
+                <p>Ya hablamos de los paradigmas como las "filosofías" o estilos de programación (imperativo, declarativo, etc.). Ahora, un lenguaje de programación (como JavaScript, Python o C++) es la herramienta que usamos para escribir el programa.</p>
+
+                <p>La confusión surge porque muchos lenguajes están fuertemente asociados con un paradigma en particular. Por ejemplo:</p>
+
+                <ul>
+                    <li><strong>Python y Java</strong> se asocian mucho con la <strong>programación orientada a objetos</strong>.</li>
+                    <li><strong>Haskell</strong> está muy ligado a la <strong>programación funcional.</strong></li>
+                    <li><strong>Prolog</strong> es el ejemplo clásico de la <strong>programación lógica.</strong></li>
+                </ul>
+
+                <div class="highlight-box tip">
+                    <p><strong>💡 Tip:</strong> Es importante conocer que muchos lenguajes modernos son multiparadigma.</p>
+                </div>
+
+                <p>Esto significa que un solo lenguaje te permite escribir código usando diferentes estilos. El mejor ejemplo es JavaScript, que vamos a ver en la parte de web sin dudas.</p>
+
+                <ul>
+                    <li>Puedes escribir código imperativo (con instrucciones paso a paso).</li>
+                    <li>También puedes usar programación orientada a objetos (creando "objetos" con datos y funciones).</li>
+                    <li>Y puedes aplicar conceptos de programación funcional (usando funciones como ciudadanos de primera clase, funciones puras, etc.).</li>
+                </ul>
+
+                <h4>¿Por qué es esto importante?</h4>
+
+                <p>Entender esto da la libertad de elegir la mejor herramienta (el lenguaje) para el problema, y al mismo tiempo les permite explorar diferentes formas de pensar sin tener que cambiar de lenguaje constantemente.</p>
             </section>
 
             <section class="content-section">
@@ -197,11 +236,11 @@
                     <h4>Programar es un proceso de aprendizaje continuo. 🧠</h4>
                 </div>
 
-                <p>Como programadores, no llegamos sabiendo todo sobre el dominio de interés. Nuestro trabajo es:</p>
+                <p>Como programadores, no llegamos sabiendo todo sobre el <strong>dominio de interés</strong>. Nuestro trabajo es:</p>
                 <ol>
                     <li><strong>Escuchar y observar:</strong> Hablar con las personas que entienden el negocio (el dueño del supermercado, los empleados, los clientes).</li>
                     <li><strong>Aprender:</strong> Entender las reglas, los procesos y las necesidades del dominio.</li>
-                    <li><strong>Representar:</strong> Convertir todo ese conocimiento en un programa que la computadora pueda ejecutar.</li>
+                    <li><strong>Representar:</strong> Convertir todo ese conocimiento en un <strong>programa</strong> que la computadora pueda <strong>ejecutar</strong>.</li>
                 </ol>
 
                 <p>Este proceso nunca termina. Los negocios y los problemas evolucionan, las leyes cambian, la tecnología avanza. Por eso, el programa también necesita evolucionar. Casi siempre, trabajarás en un programa que ya existe y que está siendo usado, y tu tarea será adaptarlo y mejorarlo.</p>
@@ -215,7 +254,7 @@
                 <h3>Resumen para llevar a casa 🚀</h3>
                 <div class="summary-box">
                     <ul>
-                        <li><strong>Un programa</strong> no es solo una lista de instrucciones, es una <strong>representación ejecutable del conocimiento</strong> sobre un tema.</li>
+                        <li><strong>Un programa</strong> no es solo una lista de instrucciones, es una <strong>representación ejecutable del conocimiento</strong> sobre un dominio de interés.</li>
                         <li><strong>Programar</strong> es un <strong>proceso de aprendizaje constante</strong>, donde observamos el mundo, entendemos un problema y lo traducimos a un lenguaje que la computadora pueda usar.</li>
                         <li><strong>La programación profesional</strong> es un oficio que combina habilidades técnicas con la capacidad de entender y <strong>colaborar en un mundo dinámico y complejo.</strong></li>
                     </ul>
