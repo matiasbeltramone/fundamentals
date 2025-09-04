@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
+
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
@@ -24,6 +25,7 @@
                 <a href="#inicio">Inicio</a>
                 <a href="#tutoriales">Tutoriales</a>
                 <a href="#recursos">Recursos</a>
+                <a href="#about">Sobre mí</a>
             </div>
         </div>
     </div>
@@ -34,14 +36,46 @@
     <div class="container">
         <h1 class="hero-title">Portal de Programación</h1>
         <p class="hero-subtitle">
-            Material de la cátedra - Ejemplos y guías prácticas para aprender desarrollo web y programación
+            Guías, Ejemplos y conceptos fundamentales para aprender desarrollo web y programación
         </p>
         <div class="hero-buttons">
             <a href="#tutoriales" class="btn btn-primary">
                 Explorar Tutoriales
                 <span class="btn-arrow">→</span>
             </a>
-            <a href="#recursos" class="btn btn-secondary">Ver Recursos</a>
+            <a href="about.html" class="btn btn-secondary">Sobre mí</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="about-brief">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Sobre mi:</h2>
+                <p>
+                    Soy <strong>Matías Beltramone</strong>, Ingeniero en Sistemas de Información egresado de UTN San Francisco.
+                    Con más de 10 años de experiencia en el área desarrollo de software, especializado actualmente en Node.js, TypeScript y arquitecturas cloud.
+                </p>
+                <p>
+                    Actualmente, trabajo como Backend Engineer, pero además mi pasión es enseñar y compartir conocimiento de la manera más sencilla posible.
+                    Este blog reúne material educativo que uso en mis clases, workshops y proyectos personales y profesionales.
+                </p>
+                <div class="about-links">
+                    <a href="about.html" class="btn btn-small btn-primary">Ver perfil completo</a>
+                    <a href="https://www.linkedin.com/in/mgbeltramone/" target="_blank" class="btn btn-small btn-secondary">
+                        LinkedIn →
+                    </a>
+                </div>
+            </div>
+
+            <div class="about-avatar">
+                <div class="avatar-placeholder">
+                    <span>MB</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -183,8 +217,12 @@
                 <div class="footer-logo">📚</div>
                 <span>Portal de Programación</span>
             </div>
-            <p class="footer-text">Hecho con ❤️ para estudiantes y desarrolladores</p>
-            <p class="footer-small">Desplegado con GitHub Pages • Actualizado regularmente</p>
+            <!-- Updated footer with contact info -->
+            <p class="footer-text">Hecho con ❤️ para estudiantes y desarrolladores por Matías Beltramone</p>
+            <p class="footer-small">
+                <a href="mailto:mgbeltramone@gmail.com">mgbeltramone@gmail.com</a> •
+                Desplegado con GitHub Pages
+            </p>
         </div>
     </div>
 </footer>
