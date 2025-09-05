@@ -21,6 +21,9 @@
     --radius: 12px;
     --font-family: "Inter", system-ui, -apple-system, sans-serif;
     --font-mono: "JetBrains Mono", monospace;
+    --card-background: white;
+    --border-color: var(--border);
+    --accent-color: #f7df1e;
 }
 
 body {
@@ -1058,83 +1061,351 @@ body {
     color: var(--primary-color);
 }
 
-/* Responsive */
+/* Comparison Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.comparison-item {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.comparison-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Client-Server Grid */
+.client-server-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.cs-item {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cs-item.client {
+    border-left: 4px solid var(--primary-color);
+}
+
+.cs-item.server {
+    border-left: 4px solid var(--accent-color);
+}
+
+.cs-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Process Steps */
+.process-steps {
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--card-background);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content p {
+    margin: 0;
+}
+
+/* Pillars Grid */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.pillar {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.pillar.html {
+    border-left: 4px solid #e34c26;
+}
+
+.pillar.css {
+    border-left: 4px solid #1572b6;
+}
+
+.pillar.js {
+    border-left: 4px solid #f7df1e;
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Web Parts Grid */
+.web-parts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.web-part {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.web-part.frontend {
+    border-left: 4px solid var(--primary-color);
+}
+
+.web-part.backend {
+    border-left: 4px solid var(--accent-color);
+}
+
+.part-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Definition Box */
+.definition-box {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.definition-box blockquote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Dual Role Grid (JavaScript page) */
+.dual-role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.role-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.role-card.frontend {
+    border-left: 4px solid var(--primary-color);
+}
+
+.role-card.backend {
+    border-left: 4px solid var(--accent-color);
+}
+
+.role-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.role-icon {
+    font-size: 2rem;
+    margin-right: 0.75rem;
+}
+
+.role-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.role-example {
+    background: var(--background-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* DOM Actions */
+.dom-actions {
+    margin: 1.5rem 0;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--card-background);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.action-icon {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* Steps Container (JavaScript page) */
+.steps-container {
+    margin: 2rem 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.step-item .step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+}
+
+.step-item .step-content {
+    flex: 1;
+}
+
+.step-item .step-content h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.step-item .step-content p {
+    margin: 0 0 1rem 0;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Closing Statement */
+.closing-statement {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--card-background);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 3rem 0;
-    }
-
-    .tutorials-grid {
+    .comparison-grid,
+    .client-server-grid,
+    .pillars-grid,
+    .web-parts-grid,
+    .dual-role-grid {
         grid-template-columns: 1fr;
-    }
-
-    .tutorial-card {
-        padding: 1.5rem;
-    }
-
-    .card-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-
-    /* Added responsive styles for article pages */
-    .article-info {
-        flex-direction: column;
         gap: 1rem;
     }
 
-    .paradigms-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links {
+    .step,
+    .step-item {
         flex-direction: column;
-    }
-
-    .nav-link {
-        max-width: none;
-    }
-
-    /* Added responsive styles for about sections */
-    .about-content,
-    .about-hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
         text-align: center;
     }
 
-    .about-links,
-    .about-contact {
-        justify-content: center;
+    .step-number,
+    .step-item .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 
-    .avatar-large {
-        width: 150px;
-        height: 150px;
-        font-size: 3rem;
+    .role-header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .role-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 
-    .teaching-grid {
-        grid-template-columns: 1fr;
+    .action-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .action-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 }
 
