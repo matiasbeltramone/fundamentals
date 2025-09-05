@@ -29,255 +29,239 @@
     </div>
 </nav>
 
-<!-- Breadcrumb -->
-<div class="breadcrumb">
-    <div class="container">
-        <a href="index.html">Inicio</a>
-        <span class="breadcrumb-separator">→</span>
-        <span class="breadcrumb-current">¿Qué es la Web?</span>
-    </div>
-</div>
-
 <!-- Article Header -->
 <header class="article-header">
     <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span class="breadcrumb-separator">→</span>
+            <span>Fundamentos de Programación</span>
+        </div>
+
         <div class="article-meta">
-            <span class="article-category web">🌐 Desarrollo Web</span>
-            <span class="article-date">Material Educativo</span>
+            <div class="article-category web">Fundamentos</div>
+            <h1 class="article-title">¿Qué es la web? Entendiendo el universo de internet</h1>
+            <p class="article-subtitle">
+                Descubre la diferencia entre Internet y la Web, comprende el modelo cliente-servidor y conoce los pilares fundamentales del desarrollo web
+            </p>
+
+            <div class="article-info">
+                <span class="info-item">⏱️ 15 min de lectura</span>
+                <span class="info-item">🏷️ Nivel básico</span>
+                <span class="info-item">👨‍💻 Matías Beltramone</span>
+                <span class="info-item">📅 Actualizado recientemente</span>
+            </div>
         </div>
-        <h1 class="article-title">¿Qué es la web? Entendiendo el universo de internet</h1>
-        <p class="article-subtitle">
-            Descubre la diferencia entre Internet y la Web, comprende el modelo cliente-servidor y conoce los pilares fundamentales del desarrollo web
-        </p>
-        <div class="article-info">
-            <span class="info-item">⏱️ 15 min lectura</span>
-            <span class="info-item">🏷️ Nivel: Básico</span>
-            <span class="info-item">👨‍💻 Matías Beltramone</span>
-        </div>
+
     </div>
 </header>
 
 <!-- Article Content -->
 <main class="article-content">
     <div class="container">
-        <div class="content-wrapper">
-            <p class="lead">
-                Anteriormente hablamos sobre qué es programar y qué es un programa. Ahora, vamos a adentrarnos en la segunda pieza del rompecabezas: <strong>la web</strong>.
-            </p>
+        <article class="content">
+            <!-- Fixed structure to match fundamentos.html working format -->
+            <section class="content-section">
+                <p class="lead">
+                    Anteriormente hablamos sobre qué es programar y qué es un programa. Ahora, vamos a adentrarnos en la segunda pieza del rompecabezas: <strong>la web</strong>.
+                </p>
 
-            <p>
-                Aunque a menudo usamos "internet" y "web" como sinónimos, en realidad son dos cosas distintas. Esto se debe a que las palabras en inglés <strong>network</strong> y <strong>web</strong> se traducen a "red", lo que genera confusión. Entender la diferencia es un primer paso fundamental para cualquier programador web.
-            </p>
+                <p>
+                    Aunque a menudo usamos "internet" y "web" como sinónimos, en realidad son dos cosas distintas. Esto se debe a que las palabras en inglés <strong>network</strong> y <strong>web</strong> se traducen a "red", lo que genera confusión. Entender la diferencia es un primer paso fundamental para cualquier programador web.
+                </p>
+            </section>
 
-            <h2>Internet vs. La Web: ¿Son lo mismo?</h2>
+            <section class="content-section">
+                <h2>🌐 Internet vs. La Web: ¿Son lo mismo?</h2>
 
-            <h3>Comenzamos con Internet</h3>
+                <h3>Comenzamos con Internet</h3>
 
-            <p>
-                <strong>Internet</strong> es una red global de computadoras y dispositivos conectados entre sí. Es la infraestructura física y el conjunto de reglas que permiten que la información viaje de un <strong>punto</strong> a otro. Es la base tecnológica sobre la que se construyen muchos servicios, incluyendo la <strong>web</strong>.
-            </p>
+                <p>
+                    <strong>Internet</strong> es una red global de computadoras y dispositivos conectados entre sí. Es la infraestructura física y el conjunto de reglas que permiten que la información viaje de un <strong>punto</strong> a otro. Es la base tecnológica sobre la que se construyen muchos servicios, incluyendo la <strong>web</strong>.
+                </p>
 
-            <p>
-                Su funcionamiento se basa en una suite de protocolos de comunicación, siendo los más fundamentales el <strong>Protocolo de Internet (IP)</strong> y el <strong>Protocolo de Control de Transmisión (TCP)</strong>.
-            </p>
+                <p>
+                    Su funcionamiento se basa en una suite de protocolos de comunicación, siendo los más fundamentales el <strong>Protocolo de Internet (IP)</strong> y el <strong>Protocolo de Control de Transmisión (TCP)</strong>.
+                </p>
 
-            <h3>IP: La dirección y el envío</h3>
+                <h3>📍 IP: La dirección y el envío</h3>
 
-            <p>
-                El <strong>Protocolo IP</strong> le da a cada dispositivo conectado a Internet una dirección única, como si fuera la dirección de una casa que identifica de manera única a un dispositivo en particular (PC, Notebook, Reloj, Televisor, etc.). Su único trabajo es <strong>asegurarse</strong> de que los <strong>paquetes de datos</strong> (trozos de información) viajen desde el <strong>punto A al punto B</strong>.
-            </p>
+                <p>
+                    El <strong>Protocolo IP</strong> le da a cada dispositivo conectado a Internet una dirección única, como si fuera la dirección de una casa que identifica de manera única a un dispositivo en particular (PC, Notebook, Reloj, Televisor, etc.). Su único trabajo es <strong>asegurarse</strong> de que los <strong>paquetes de datos</strong> (trozos de información) viajen desde el <strong>punto A al punto B</strong>.
+                </p>
 
-            <p>
-                Es un protocolo <strong>"sin conexión"</strong> y <strong>"no confiable"</strong>, lo que significa que no verifica si los paquetes llegaron ni en qué orden. Simplemente los envía y confía en otros protocolos para la verificación.
-            </p>
+                <p>
+                    Es un protocolo <strong>"sin conexión"</strong> y <strong>"no confiable"</strong>, lo que significa que no verifica si los paquetes llegaron ni en qué orden. Simplemente los envía y confía en otros protocolos para la verificación.
+                </p>
 
-            <div class="highlight-box info">
-                <div class="highlight-icon">💡</div>
-                <div class="highlight-content">
-                    <h4>Analogía</h4>
+                <div class="highlight-box info">
+                    <h4>💡 Analogía</h4>
                     <p>
                         <strong>IP es la dirección postal y los carteros.</strong> IP se encarga de poner la dirección correcta en el sobre (la dirección IP) y los carteros (los routers) se aseguran de que el sobre se mueva en la dirección correcta, de un punto a otro, hasta llegar a su destino. No les importa si el sobre se mojó o si llegó roto, solo se encargan del envío.
                     </p>
                 </div>
-            </div>
 
-            <h3>TCP: El supervisor que asegura la entrega</h3>
+                <h3>🔒 TCP: El supervisor que asegura la entrega</h3>
 
-            <p>
-                El <strong>TCP</strong> es un protocolo de transporte <strong>"orientado a la conexión"</strong> y <strong>"confiable"</strong> que opera sobre IP. Es de alguna manera como un supervisor que trabaja junto con IP. Su trabajo es asegurarse de que los paquetes que se envían por IP lleguen completos y en el orden correcto ya que, como vimos, IP no se asegura de ello. <strong>Si un paquete se pierde, TCP pide que se reenvíe.</strong>
-            </p>
+                <p>
+                    El <strong>TCP</strong> es un protocolo de transporte <strong>"orientado a la conexión"</strong> y <strong>"confiable"</strong> que opera sobre IP. Es de alguna manera como un supervisor que trabaja junto con IP. Su trabajo es asegurarse de que los paquetes que se envían por IP lleguen completos y en el orden correcto ya que, como vimos, IP no se asegura de ello. <strong>Si un paquete se pierde, TCP pide que se reenvíe.</strong>
+                </p>
 
-            <div class="highlight-box info">
-                <div class="highlight-icon">💡</div>
-                <div class="highlight-content">
-                    <h4>Analogía</h4>
+                <div class="highlight-box info">
+                    <h4>💡 Analogía</h4>
                     <p>
                         <strong>TCP es el servicio que te pide una firma al recibir un paquete.</strong> IP es el cartero que entrega. TCP es quien verifica que el paquete llegó, pide que firmes de recibido y, si el paquete se perdió, inicia el proceso para que te reenvíen otro, asegurando que el contenido te llegue completo y sin daños.
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <h3>Seguimos con la Web</h3>
+            <section class="content-section">
+                <h3>🌍 Seguimos con la Web</h3>
 
-            <p>
-                La <strong>web</strong> en palabras simples, es un sistema de documentos electrónicos (páginas web) interconectados. Pero es una de las muchas cosas que puedes hacer con Internet. Para acceder a la web, necesitas un programa especial llamado <strong>navegador web</strong>, que te permite ver e interactuar con estas páginas.
-            </p>
+                <p>
+                    La <strong>web</strong> en palabras simples, es un sistema de documentos electrónicos (páginas web) interconectados. Pero es una de las muchas cosas que puedes hacer con Internet. Para acceder a la web, necesitas un programa especial llamado <strong>navegador web</strong>, que te permite ver e interactuar con estas páginas.
+                </p>
 
-            <div class="highlight-box tip">
-                <div class="highlight-icon">🔧</div>
-                <div class="highlight-content">
-                    <h4>Siendo un poco más técnicos</h4>
+                <div class="highlight-box tip">
+                    <h4>🔧 Siendo un poco más técnicos</h4>
                     <p>
                         La <strong>World Wide Web</strong> (<em>Web</em>) es un <strong>sistema de información distribuido</strong> que se basa en el modelo cliente-servidor y el protocolo HTTP. A diferencia de Internet (la red), la web es una <strong>capa de aplicación</strong> que utiliza recursos y servicios ofrecidos por la red subyacente. La interacción se inicia con una <strong>petición HTTP</strong> de un cliente a un servidor, que responde con un documento, a menudo escrito en HTML, que puede contener referencias a otros recursos (CSS, JavaScript, imágenes) para crear una experiencia de usuario más rica en visual e información.
                     </p>
                 </div>
-            </div>
 
-            <h2>Resumen con analogía: Internet vs. La Web</h2>
+                <h3>📊 Resumen con analogía: Internet vs. La Web</h3>
 
-            <div class="comparison-grid">
-                <div class="comparison-item">
-                    <div class="comparison-icon">🛣️</div>
-                    <h4>Internet es el sistema de correos</h4>
-                    <p>La infraestructura de carreteras, aviones, oficinas postales y carteros que permite que una carta viaje de cualquier lugar a cualquier otro. Es la red de transporte en sí.</p>
-                </div>
-                <div class="comparison-item">
-                    <div class="comparison-icon">📬</div>
-                    <h4>La web son las cartas que viajan</h4>
-                    <p>Son un tipo específico de contenido (cartas con hipervínculos) que utiliza el sistema de correos para llegar a su destino. También puedes enviar paquetes, telegramas o cualquier otra cosa por ese mismo sistema, pero solo las cartas son "la web".</p>
-                </div>
-            </div>
-
-            <div class="summary-box">
-                <h4>Resumiendo</h4>
-                <p>Internet es la base, la Web es la aplicación más popular que corre sobre esa base.</p>
-            </div>
-
-            <h2>El modelo Cliente-Servidor: ¿Cómo funciona la magia?</h2>
-
-            <p>
-                Cada vez que entras a un sitio web, se activa un intercambio de información que funciona con un modelo simple pero poderoso.
-            </p>
-
-            <div class="client-server-grid">
-                <div class="cs-item client">
-                    <div class="cs-icon">👤</div>
-                    <h4>El cliente</h4>
-                    <p>Eres tú, usando un <strong>navegador web</strong> (como Chrome, Firefox o Safari). Tu navegador es el que hace la solicitud.</p>
-                </div>
-                <div class="cs-item server">
-                    <div class="cs-icon">🖥️</div>
-                    <h4>El servidor</h4>
-                    <p>Es una computadora conectada a Internet que almacena los archivos del sitio web. El servidor es el que responde a tu solicitud.</p>
-                </div>
-            </div>
-
-            <h3>El proceso paso a paso:</h3>
-
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <p>Tú escribes una <strong>URL</strong> (como <code>google.com</code>) en tu navegador.</p>
+                <div class="paradigms-grid">
+                    <div class="paradigm-card">
+                        <h4>🛣️ Internet es el sistema de correos</h4>
+                        <p>La infraestructura de carreteras, aviones, oficinas postales y carteros que permite que una carta viaje de cualquier lugar a cualquier otro. Es la red de transporte en sí.</p>
+                    </div>
+                    <div class="paradigm-card">
+                        <h4>📬 La web son las cartas que viajan</h4>
+                        <p>Son un tipo específico de contenido (cartas con hipervínculos) que utiliza el sistema de correos para llegar a su destino. También puedes enviar paquetes, telegramas o cualquier otra cosa por ese mismo sistema, pero solo las cartas son "la web".</p>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <p>Tu navegador (el <strong>cliente</strong>) envía una <strong>petición</strong> al servidor donde está alojado el sitio.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <p>El servidor encuentra los archivos (HTML, CSS, JavaScript, etc.) y los envía de vuelta al cliente.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <p>Tu navegador recibe todos esos archivos y los <strong>interpreta</strong> para mostrarte la página web.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="highlight-box tip">
-                <div class="highlight-icon">💡</div>
-                <div class="highlight-content">
-                    <h4>Tip</h4>
+                <div class="highlight-box success">
+                    <h4>📝 Resumiendo</h4>
+                    <p>Internet es la base, la Web es la aplicación más popular que corre sobre esa base.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>🤝 El modelo Cliente-Servidor: ¿Cómo funciona la magia?</h2>
+
+                <p>
+                    Cada vez que entras a un sitio web, se activa un intercambio de información que funciona con un modelo simple pero poderoso.
+                </p>
+
+                <div class="paradigms-grid">
+                    <div class="paradigm-card">
+                        <h4>👤 El cliente</h4>
+                        <p>Eres tú, usando un <strong>navegador web</strong> (como Chrome, Firefox o Safari). Tu navegador es el que hace la solicitud.</p>
+                    </div>
+                    <div class="paradigm-card">
+                        <h4>🖥️ El servidor</h4>
+                        <p>Es una computadora conectada a Internet que almacena los archivos del sitio web. El servidor es el que responde a tu solicitud.</p>
+                    </div>
+                </div>
+
+                <h3>🔄 El proceso paso a paso:</h3>
+
+                <div class="code-block">
+                    <ol>
+                        <li><strong>Paso 1:</strong> Tú escribes una <strong>URL</strong> (como <code>google.com</code>) en tu navegador.</li>
+                        <li><strong>Paso 2:</strong> Tu navegador (el <strong>cliente</strong>) envía una <strong>petición</strong> al servidor donde está alojado el sitio.</li>
+                        <li><strong>Paso 3:</strong> El servidor encuentra los archivos (HTML, CSS, JavaScript, etc.) y los envía de vuelta al cliente.</li>
+                        <li><strong>Paso 4:</strong> Tu navegador recibe todos esos archivos y los <strong>interpreta</strong> para mostrarte la página web.</li>
+                    </ol>
+                </div>
+
+                <div class="highlight-box tip">
+                    <h4>💡 Tip</h4>
                     <p>
                         Piensa en la comunicación como un diálogo. Cada vez que haces clic en un enlace o recargas una página, tu navegador está haciendo una <strong>petición</strong>. La información que recibes es la <strong>respuesta</strong> del servidor.
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <h2>Los 3 pilares de la web: Las tecnologías clave</h2>
+            <section class="content-section">
+                <h2>🏗️ Los 3 pilares de la web: Las tecnologías clave</h2>
 
-            <p>La web funciona gracias a tres tecnologías principales que trabajan juntas:</p>
+                <p>La web funciona gracias a tres tecnologías principales que trabajan juntas:</p>
 
-            <div class="pillars-grid">
-                <div class="pillar html">
-                    <div class="pillar-icon">📄</div>
-                    <h4>HTML (HyperText Markup Language)</h4>
-                    <p>Es el lenguaje que define la <strong>estructura</strong> y el <strong>contenido</strong> de una página web. Piensa en el HTML como el esqueleto y los órganos de una página, con los textos, imágenes y enlaces.</p>
+                <div class="paradigms-grid">
+                    <div class="paradigm-card">
+                        <h4>📄 HTML (HyperText Markup Language)</h4>
+                        <p>Es el lenguaje que define la <strong>estructura</strong> y el <strong>contenido</strong> de una página web. Piensa en el HTML como el esqueleto y los órganos de una página, con los textos, imágenes y enlaces.</p>
+                    </div>
+                    <div class="paradigm-card">
+                        <h4>🎨 CSS (Cascading Style Sheets)</h4>
+                        <p>Es el lenguaje que define el <strong>estilo</strong> y la apariencia visual. Si el HTML es el cuerpo, el CSS es la ropa, el maquillaje y el peinado. Le dice al navegador cómo debe verse el sitio (colores, fuentes, tamaño, etc.).</p>
+                    </div>
+                    <div class="paradigm-card">
+                        <h4>⚡ JavaScript</h4>
+                        <p>Es un <strong>lenguaje de programación</strong> que le da <strong>comportamiento y dinamismo</strong> a la web. Con JavaScript, un botón puede hacer algo cuando lo presionas, un menú puede desplegarse o el contenido puede cambiar sin recargar la página.</p>
+                    </div>
                 </div>
-                <div class="pillar css">
-                    <div class="pillar-icon">🎨</div>
-                    <h4>CSS (Cascading Style Sheets)</h4>
-                    <p>Es el lenguaje que define el <strong>estilo</strong> y la apariencia visual. Si el HTML es el cuerpo, el CSS es la ropa, el maquillaje y el peinado. Le dice al navegador cómo debe verse el sitio (colores, fuentes, tamaño, etc.).</p>
-                </div>
-                <div class="pillar js">
-                    <div class="pillar-icon">⚡</div>
-                    <h4>JavaScript</h4>
-                    <p>Es un <strong>lenguaje de programación</strong> que le da <strong>comportamiento y dinamismo</strong> a la web. Con JavaScript, un botón puede hacer algo cuando lo presionas, un menú puede desplegarse o el contenido puede cambiar sin recargar la página.</p>
-                </div>
-            </div>
 
-            <div class="highlight-box warning">
-                <div class="highlight-icon">🌐</div>
-                <div class="highlight-content">
-                    <h4>El rol del navegador: ¡Mucho más que un visor de páginas!</h4>
+                <div class="highlight-box warning">
+                    <h4>🌐 El rol del navegador: ¡Mucho más que un visor de páginas!</h4>
                     <p>
                         Es importante que sepas que el navegador no solo muestra la información que recibe. Es un <strong>intérprete</strong> que lee el código, lo procesa y ejecuta. Lo que escribas en JavaScript se ejecutará directamente en el navegador del usuario.
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <h2>La definición final: ¿Qué es la programación web?</h2>
+            <section class="content-section">
+                <h2>🎯 La definición final: ¿Qué es la programación web?</h2>
 
-            <p>
-                Ahora que entendemos todos los conceptos, podemos definir la <strong>programación web</strong> de una forma mucho más completa:
-            </p>
+                <p>
+                    Ahora que entendemos todos los conceptos, podemos definir la <strong>programación web</strong> de una forma mucho más completa:
+                </p>
 
-            <div class="definition-box">
-                <blockquote>
-                    Es el proceso de construir programas con los que los usuarios interactúan usando un navegador web.
-                </blockquote>
-            </div>
-
-            <p>Esto implica que un programa web siempre tendrá dos partes:</p>
-
-            <div class="web-parts-grid">
-                <div class="web-part frontend">
-                    <div class="part-icon">🎨</div>
-                    <h4>El lado del cliente (frontend)</h4>
-                    <p>La parte que se ejecuta en el navegador del usuario y que se encarga de la interfaz (HTML, CSS) y la interacción (JavaScript).</p>
+                <div class="highlight-box success">
+                    <blockquote>
+                        <strong>Es el proceso de construir programas con los que los usuarios interactúan usando un navegador web.</strong>
+                    </blockquote>
                 </div>
-                <div class="web-part backend">
-                    <div class="part-icon">⚙️</div>
-                    <h4>El lado del servidor (backend)</h4>
-                    <p>La parte que se ejecuta en el servidor y que se encarga de almacenar datos, gestionar usuarios y proveer lo que el cliente necesita.</p>
+
+                <p>Esto implica que un programa web siempre tendrá dos partes:</p>
+
+                <div class="paradigms-grid">
+                    <div class="paradigm-card">
+                        <h4>🎨 El lado del cliente (frontend)</h4>
+                        <p>La parte que se ejecuta en el navegador del usuario y que se encarga de la interfaz (HTML, CSS) y la interacción (JavaScript).</p>
+                    </div>
+                    <div class="paradigm-card">
+                        <h4>⚙️ El lado del servidor (backend)</h4>
+                        <p>La parte que se ejecuta en el servidor y que se encarga de almacenar datos, gestionar usuarios y proveer lo que el cliente necesita.</p>
+                    </div>
                 </div>
-            </div>
 
-            <p>
-                Y ahora, la pregunta que nos hacemos es: <strong>¿Cómo conectamos estos dos lados y hacemos que todo funcione en armonía?</strong>
-            </p>
+                <p>
+                    Y ahora, la pregunta que nos hacemos es: <strong>¿Cómo conectamos estos dos lados y hacemos que todo funcione en armonía?</strong>
+                </p>
 
-            <p class="closing-statement">
-                ¡Ese es el desafío y la diversión de la programación web!
-            </p>
-        </div>
+                <div class="highlight-box tip">
+                    <p class="closing-statement">
+                        <strong>¡Ese es el desafío y la diversión de la programación web!</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Resumen para llevar a casa 🚀</h3>
+                <div class="summary-box">
+                    <ul>
+                        <li><strong>Internet</strong> es la infraestructura global de redes, mientras que <strong>la Web</strong> es un sistema de documentos interconectados que funciona sobre Internet.</li>
+                        <li><strong>El modelo cliente-servidor</strong> es la base de cómo funciona la web: tu navegador pide, el servidor responde.</li>
+                        <li><strong>Los tres pilares</strong> (HTML, CSS, JavaScript) trabajan juntos para crear experiencias web completas.</li>
+                        <li><strong>La programación web</strong> combina frontend y backend para crear aplicaciones que los usuarios usan a través de navegadores.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
     </div>
 </main>
 
